@@ -24,4 +24,4 @@ if __name__ == '__main__' :
     c3 = c1 + c2
     c4 = c1 < c2
     c5 = c2 > c3
-    print(c2)
+    print(c5)

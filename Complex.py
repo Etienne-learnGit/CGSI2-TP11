@@ -47,4 +47,4 @@ if __name__ == '__main__' :
     c8 = abs(c1)
     c9 = (c2==c3)
     c10 = (c2!=c1)
-    print(c10)
+    print(c9)
