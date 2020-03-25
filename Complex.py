@@ -11,18 +11,10 @@ class complex :
         return complex(self.__Re-obj.__Re, self.__Im-obj.__Im)
 
     def __mul__(self, obj):
-        a = self.__Re
-        b = self.__Im
-        A = obj.__Re
-        B = obj.__Im
-        return complex(a*A-B*b, a*B+b*A)
+        return complex(self.__Re*obj.__Re-obj.__Im*self.__Im, self.__Re*obj.__Im+self.__Im*obj.__Re)
 
     def __truediv__(self, obj):
-        a = self.__Re
-        b = self.__Im
-        A = obj.__Re
-        B = obj.__Im
-        return complex((a*A+b*B)/(A**2-B**2),(a*B+b*A)/(A**2-B**2))
+        return complex((self.__Re*obj.__Re+self.__Im*obj.__Im)/(obj.__Re**2-obj.__Im**2),(self.__Re*obj.__Im+self.__Im*obj.__Re)/(obj.__Re**2-obj.__Im**2))
 
     def __abs__(self):
         return complex(int(((self.__Re)**2)**(1/2)), int(((self.__Im)**2)**(1/2)))
@@ -47,4 +39,4 @@ if __name__ == '__main__' :
     c8 = abs(c1)
     c9 = (c2==c3)
     c10 = (c2!=c1)
-    print(c9)
+    print(c5)
